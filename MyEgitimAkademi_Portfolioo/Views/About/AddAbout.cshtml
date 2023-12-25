@@ -1,0 +1,27 @@
+﻿@model MyEgitimAkademi_Portfolioo.Models.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Hakkımda Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Giriş</label>
+    <input type="text" name="Introduction" class="form-control" />
+    <br />
+    <label>İsim Soyad</label>
+    <input type="text" name="NameSurname" class="form-control" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" />
+    <br />
+    <label>Resim</label>
+    <input type="text" name="AboutImage" class="form-control" />
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>
+

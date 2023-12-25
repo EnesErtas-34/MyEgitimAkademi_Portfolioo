@@ -1,0 +1,22 @@
+﻿@model MyEgitimAkademi_Portfolioo.Models.Award
+@{
+    ViewBag.Title = "AddAward";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Ödül Ekleme Sayfası</h2>
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.AwardID, new { @class = "form-control" })
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <label>Resim</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>
+
+

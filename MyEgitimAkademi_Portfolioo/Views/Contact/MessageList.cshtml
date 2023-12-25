@@ -1,0 +1,31 @@
+﻿@model List<MyEgitimAkademi_Portfolioo.Models.Contact>
+@{
+    ViewBag.Title = "MessageList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>Gelen Mesajlar</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Mail</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.Name</td>
+            <td>@item.Mail</td>
+            <td>@item.Subject</td>
+            <td>@item.Message</td>
+            <td><a href="/Contact/DeleteMessage/@item.ContactID" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+

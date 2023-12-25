@@ -1,0 +1,26 @@
+﻿@model MyEgitimAkademi_Portfolioo.Models.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hakkımda Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Giriş</label>
+    @Html.TextBoxFor(x => x.AboutID, new { @class = "form-control" })
+    <br />
+    <label>İsim Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Resim</label>
+    @Html.TextBoxFor(x => x.AboutImage, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+</form>
